@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Brown Bird - UTL Solar, Battery & Inverter Distributor',
+  title: 'Brown Bird Solar Distributor',
   description: 'Authorized distributor of UTL solar panels, batteries, and inverters across Karnataka. Serving Hubli, Belgaum, and more.',
   keywords: 'solar panels, batteries, inverters, UTL, distributor, Karnataka',
 };

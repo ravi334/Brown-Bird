@@ -17,7 +17,7 @@ export default function Header() {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-brown-dark">Brown Bird</h1>
-              <p className="text-xs text-gray-600 leading-tight">UTL Distributor</p>
+              <p className="text-xs text-gray-600 leading-tight">Solar Distributor</p>
             </div>
           </Link>
 

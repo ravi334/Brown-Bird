@@ -578,6 +578,61 @@ export const products: Product[] = [
 
   // Solar System Kits
   {
+    id: 'solar-kit-shinex-3-2kw-ongrid',
+    name: 'UTL ShineX 3.2kW On-Grid Rooftop Solar Kit',
+    category: 'solar-system',
+    subcategory: 'On-Grid Solar System',
+    image: 'https://d3nut88kxhmnud.cloudfront.net/2026/01/solar-shinex-lit-complete-power-package.jpeg',
+    description: 'Ready-to-install single-phase rooftop kit with DCR bifacial panels, net metering support, and PM Surya Ghar subsidy eligibility.',
+    specifications: {
+      'System Capacity': '3.2 kW',
+      'Phase': 'Single phase',
+      'Solar Panels': '6 x 530W mono bifacial DCR panels',
+      'Inverter': 'UTL GT-3.3-GXS1 on-grid inverter',
+      'Net Metering': 'Supported',
+      'Subsidy Scheme': 'PM Surya Ghar Muft Bijli Yojana',
+      'Panel Warranty': '10-year product / 27-year performance'
+    },
+    features: [
+      'DCR-compliant bifacial solar panels',
+      'Complete grid-tied rooftop solution',
+      'Net metering ready',
+      'Designed for residential energy savings',
+      'Remote monitoring support',
+      'Subsidy documentation support'
+    ],
+    technology: 'ShineX On-Grid Solar',
+    application: 'Residential Rooftop'
+  },
+  {
+    id: 'solar-kit-shinex-5kw-ongrid',
+    name: 'UTL ShineX 5kW Three-Phase On-Grid Solar Kit',
+    category: 'solar-system',
+    subcategory: 'On-Grid Solar System',
+    image: 'https://d3nut88kxhmnud.cloudfront.net/2026/01/solar-shinex-kit.jpeg',
+    description: 'High-output three-phase rooftop kit with mono DCR bifacial panels, mobile monitoring, and net metering support.',
+    specifications: {
+      'System Capacity': '5.4 kW',
+      'Phase': 'Three phase',
+      'Solar Panels': '10 x 530W mono bifacial DCR panels',
+      'Inverter': 'UTL GT-5-GXT2 Pro on-grid inverter',
+      'Daily Generation': 'Approximately 20-25 units',
+      'Net Metering': 'Supported',
+      'Subsidy Scheme': 'PM Surya Ghar Muft Bijli Yojana',
+      'Panel Warranty': '10-year product / 27-year performance'
+    },
+    features: [
+      'DCR-compliant bifacial solar panels',
+      'Three-phase load balancing',
+      'Net metering and grid export support',
+      'UTL Solar App remote monitoring',
+      'Suitable for homes and small businesses',
+      'Ready-to-install component package'
+    ],
+    technology: 'ShineX Three-Phase On-Grid Solar',
+    application: 'Large Residential & Small Commercial'
+  },
+  {
     id: 'solar-kit-ongrid-3kw',
     name: 'UTL On-Grid Solar System 3kW',
     category: 'solar-system',

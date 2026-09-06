@@ -10,14 +10,24 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const [showDetails, setShowDetails] = useState(false);
 
+  const categoryImages: Record<Product['category'], string> = {
+    'solar-panel': 'https://www.upsinverter.com/wp-content/uploads/2026/06/Solar-Panel-1-1024x1024.png',
+    battery: 'https://www.upsinverter.com/wp-content/uploads/2026/06/Inverter-Battery-1-1024x1024.png',
+    inverter: 'https://www.upsinverter.com/wp-content/uploads/2026/06/Home-Inverter-1-1024x1024.png',
+    ups: 'https://www.upsinverter.com/wp-content/uploads/2026/06/Home-Inverter-1-1024x1024.png',
+    'solar-pcu': 'https://www.upsinverter.com/wp-content/uploads/2026/06/Solar-Inverter-1-1024x1024.png',
+    'solar-system': 'https://www.upsinverter.com/wp-content/uploads/2026/06/Rooftop-Solar-Solution-1-1024x1024.png',
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-      {/* Image Placeholder */}
-      <div className="w-full h-56 bg-gradient-to-br from-solar-blue to-blue-600 flex items-center justify-center text-white font-semibold text-center p-4">
-        <div>
-          <div className="text-3xl mb-2">📦</div>
-          <p className="text-sm">{product.name}</p>
-        </div>
+      <div className="relative flex h-56 items-center justify-center overflow-hidden bg-slate-100 p-4">
+        <img
+          src={product.image.startsWith('http') ? product.image : categoryImages[product.category]}
+          alt={product.name}
+          className="h-full w-full object-contain"
+          loading="lazy"
+        />
       </div>
 
       {/* Content */}
