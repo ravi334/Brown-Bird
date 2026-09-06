@@ -26,13 +26,16 @@ export default function Home() {
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-brown-dark mb-6">About Brown Bird</h2>
+            <div className="mb-6 inline-block bg-solar-blue text-white px-6 py-2 rounded-full font-bold text-lg">
+              🏆 Authorised Distributor of Tata Power Solar
+            </div>
             <p className="text-xl text-gray-700 mb-4">
-              Brown Bird is an authorized distributor of UTL solar panels, batteries, inverters, and power solutions 
+              Brown Bird is an authorized distributor of Tata Power Solar, UTL solar panels, batteries, inverters, and power solutions 
               serving Hubli, Belgaum, and across Karnataka. We provide complete renewable energy and power backup solutions 
               for residential, commercial, and industrial applications.
             </p>
             <p className="text-lg text-gray-600">
-              With years of industry expertise and a comprehensive product catalog from UTL (A Brand of Fujiyama Power Systems), 
+              With years of industry expertise and a comprehensive product catalog from Tata Power Solar and UTL (A Brand of Fujiyama Power Systems), 
               we ensure quality products and reliable customer support for all your power and energy needs.
             </p>
           </div>
@@ -333,7 +336,7 @@ export default function Home() {
                   <div className="text-4xl">💼</div>
                   <div>
                     <h4 className="font-bold text-brown-dark text-lg">Business</h4>
-                    <p className="text-gray-700">UTL Authorized Distributor</p>
+                    <p className="text-gray-700">Authorised Distributor of Tata Power Solar</p>
                     <p className="text-gray-700">Solar, Battery & Power Solutions</p>
                   </div>
                 </div>
