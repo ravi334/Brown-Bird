@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -12,8 +13,14 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo & Company Name */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <div className="w-12 h-12 bg-gradient-to-br from-brown-dark to-solar-blue rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl">B</span>
+            <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Brown Bird Solar Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-brown-dark">Brown Bird</h1>
