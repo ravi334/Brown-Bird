@@ -38,9 +38,15 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-lg bg-white p-6 shadow-lg md:p-8">
-      <h3 className="mb-2 text-2xl font-bold text-brown-dark">Send an Enquiry</h3>
-      <p className="mb-6 text-gray-600">Tell us what you need and we'll connect via WhatsApp.</p>
+    <form onSubmit={handleSubmit} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(7,30,56,.09)] md:p-8">
+      <div className="mb-6 flex items-start justify-between gap-4">
+        <div>
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-solar-blue">Start a conversation</p>
+          <h3 className="mb-2 text-2xl font-bold text-brown-dark">Send an Enquiry</h3>
+          <p className="text-gray-600">Tell us what you need and we'll connect via WhatsApp.</p>
+        </div>
+        <span className="rounded-xl bg-green-50 px-3 py-2 text-xs font-bold text-green-700">Replies fast</span>
+      </div>
       <div className="space-y-4">
         <label className="block text-sm font-semibold text-gray-700">
           Name
@@ -50,7 +56,7 @@ export default function ContactForm() {
             type="text" 
             value={formData.name}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 font-normal outline-none focus:border-solar-blue focus:ring-2 focus:ring-blue-100"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50/60 px-4 py-3 font-normal outline-none transition focus:border-solar-blue focus:bg-white focus:ring-4 focus:ring-blue-100"
           />
         </label>
         <label className="block text-sm font-semibold text-gray-700">
@@ -61,7 +67,7 @@ export default function ContactForm() {
             type="tel" 
             value={formData.phone}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 font-normal outline-none focus:border-solar-blue focus:ring-2 focus:ring-blue-100"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50/60 px-4 py-3 font-normal outline-none transition focus:border-solar-blue focus:bg-white focus:ring-4 focus:ring-blue-100"
           />
         </label>
         <label className="block text-sm font-semibold text-gray-700">
@@ -72,10 +78,10 @@ export default function ContactForm() {
             rows={4} 
             value={formData.message}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 font-normal outline-none focus:border-solar-blue focus:ring-2 focus:ring-blue-100"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50/60 px-4 py-3 font-normal outline-none transition focus:border-solar-blue focus:bg-white focus:ring-4 focus:ring-blue-100"
           />
         </label>
-        <button type="submit" className="w-full rounded-lg bg-solar-blue px-6 py-3 font-bold text-white transition hover:bg-blue-600 flex items-center justify-center gap-2">
+        <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-lg bg-brown-dark px-6 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:bg-solar-blue">
           <span>💬</span> Contact via WhatsApp
         </button>
         {submitted && <p className="text-sm font-semibold text-green-700">✓ Opening WhatsApp. Our team will respond shortly!</p>}

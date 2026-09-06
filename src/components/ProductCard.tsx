@@ -20,12 +20,13 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-      <div className="relative flex h-56 items-center justify-center overflow-hidden bg-slate-100 p-4">
+    <div className="group overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_10px_30px_rgba(7,30,56,.07)] transition duration-300 hover:-translate-y-2 hover:border-solar-blue/30 hover:shadow-[0_20px_44px_rgba(25,118,210,.16)]">
+      <div className="relative flex h-56 items-center justify-center overflow-hidden bg-gradient-to-br from-[#eef8fa] via-white to-[#fdf4d9] p-4">
+        <span className="absolute right-4 top-4 rounded-full bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-solar-blue shadow-sm">In stock</span>
         <img
           src={product.image.startsWith('http') ? product.image : categoryImages[product.category]}
           alt={product.name}
-          className="h-full w-full object-contain"
+          className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
           loading="lazy"
         />
       </div>
@@ -34,24 +35,24 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="p-6">
         {/* Category Badge */}
         <div className="flex gap-2 mb-3">
-          <span className="inline-block px-3 py-1 bg-solar-blue text-white rounded-full text-xs font-semibold">
+          <span className="inline-block rounded-full bg-solar-blue px-3 py-1 text-[10px] font-bold tracking-wide text-white">
             {product.category.replace('-', ' ').toUpperCase()}
           </span>
           {product.subcategory && (
-            <span className="inline-block px-3 py-1 bg-gray-200 text-brown-dark rounded-full text-xs font-semibold">
+            <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-[10px] font-bold tracking-wide text-brown-dark">
               {product.subcategory}
             </span>
           )}
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-bold text-brown-dark mb-2">{product.name}</h3>
+        <h3 className="mb-2 text-xl font-bold leading-tight text-brown-dark">{product.name}</h3>
 
         {/* Description */}
         <p className="text-gray-600 text-sm mb-4">{product.description}</p>
 
         {/* Key Specifications Summary */}
-        <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+        <div className="mb-4 rounded-xl border border-slate-100 bg-slate-50/80 p-3">
           <h4 className="font-semibold text-sm text-brown-dark mb-2">Key Specs:</h4>
           <div className="space-y-1 text-xs text-gray-700">
             {Object.entries(product.specifications).slice(0, 3).map(([key, value]) => (
@@ -84,7 +85,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Details Button */}
         <button
           onClick={() => setShowDetails(!showDetails)}
-          className="w-full bg-solar-blue text-white py-2 rounded-lg hover:bg-blue-600 transition font-semibold text-sm mb-2"
+          className="mb-2 w-full rounded-lg bg-solar-blue py-3 text-sm font-bold text-white transition hover:bg-tata-blue"
         >
           {showDetails ? 'Hide Details' : 'View Full Specs'}
         </button>
@@ -131,7 +132,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         )}
 
         {/* CTA Button */}
-        <button className="w-full bg-gradient-to-r from-brown-dark to-brown-light text-white py-2 rounded-lg hover:from-brown-light hover:to-brown-dark transition font-semibold text-sm mt-2">
+        <button className="mt-2 w-full rounded-lg bg-gradient-to-r from-brown-dark to-brown-light py-3 text-sm font-bold text-white transition hover:from-solar-blue hover:to-tata-blue">
           Get Quote & Details
         </button>
       </div>

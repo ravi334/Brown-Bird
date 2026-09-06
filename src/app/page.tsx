@@ -31,7 +31,7 @@ export default function Home() {
             </div>
             <p className="text-xl text-gray-700 mb-4">
               Brown Bird is an authorized distributor of Tata Power Solar, UTL solar panels, batteries, inverters, and power solutions 
-              serving Hubli, Belgaum, and across Karnataka. We provide complete renewable energy and power backup solutions 
+              serving Hubli, Belgaum, and across Karnataka. We provide End to End,  complete renewable energy and power backup solutions 
               for residential, commercial, and industrial applications.
             </p>
             <p className="text-lg text-gray-600">
@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* Products Navigation */}
-      <section className="section-padding">
+      <section className="section-padding site-grid" id="products">
         <div className="container-wide">
           <h2 className="text-4xl font-bold text-brown-dark mb-12 text-center">Our Products</h2>
           

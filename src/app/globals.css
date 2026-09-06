@@ -16,15 +16,15 @@ html {
 
 body {
   margin: 0;
-  background: #f8f9fa;
-  color: #2c3e50;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fbfaf7;
+  color: #24313a;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
 }
 
 /* Enhanced Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
 }
 
 /* Smooth transitions */
@@ -48,6 +48,56 @@ button, a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #0D47A1;
+}
+
+::selection {
+  background: #fdb913;
+  color: #2c1810;
+}
+
+.site-grid {
+  background-image: linear-gradient(rgba(25, 118, 210, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(25, 118, 210, 0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+.hero-sun {
+  position: absolute;
+  right: 8%;
+  top: 10%;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 999px;
+  background: #fdb913;
+  box-shadow: 0 0 0 1.5rem rgba(253, 185, 19, 0.12), 0 0 5rem rgba(253, 185, 19, 0.4);
+  animation: sunPulse 5s ease-in-out infinite;
+}
+
+.hero-panel {
+  position: relative;
+  width: min(31rem, 78vw);
+  aspect-ratio: 1.35;
+  transform: rotate(-8deg) skewY(2deg);
+  border: 1px solid rgba(157, 221, 239, 0.8);
+  background: linear-gradient(135deg, rgba(18, 67, 108, 0.95), rgba(7, 30, 56, 0.92));
+  box-shadow: 1.5rem 1.5rem 0 rgba(7, 33, 58, 0.28), 0 2rem 4rem rgba(2, 16, 32, 0.3);
+  overflow: hidden;
+}
+
+.hero-panel::before,
+.hero-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(132, 215, 238, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(132, 215, 238, 0.28) 1px, transparent 1px);
+  background-size: 16.66% 25%;
+}
+
+.hero-panel::after {
+  background: linear-gradient(125deg, transparent 38%, rgba(255, 255, 255, 0.18) 48%, transparent 58%);
+  transform: translateX(-100%);
+  animation: panelShine 6s ease-in-out infinite;
 }
 
 @layer components {
@@ -122,6 +172,24 @@ button, a {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes sunPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes panelShine {
+  0%, 35% { transform: translateX(-100%); }
+  65%, 100% { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
 
