@@ -39,6 +39,9 @@ export default function Header() {
             <Link href="#applications" className="font-semibold text-gray-600 transition hover:text-solar-blue">
               Applications
             </Link>
+            <Link href="#projects" className="font-semibold text-gray-600 transition hover:text-solar-blue">
+              Projects
+            </Link>
             <Link href="#services" className="font-semibold text-gray-600 transition hover:text-solar-blue">
               Services
             </Link>
@@ -96,6 +99,13 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Applications
+            </Link>
+            <Link
+              href="#projects"
+              className="block py-2 font-medium text-gray-700 transition hover:text-brown-dark"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Projects
             </Link>
             <Link
               href="#services"

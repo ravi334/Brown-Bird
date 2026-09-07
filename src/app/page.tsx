@@ -3,6 +3,7 @@
 import HeroSection from '@/components/HeroSection';
 import ProductCard from '@/components/ProductCard';
 import ContactForm from '@/components/ContactForm';
+import CompletedProjects from '@/components/CompletedProjects';
 import { products, categories, getProductsByCategory } from '@/data/products';
 import { useState } from 'react';
 
@@ -249,6 +250,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CompletedProjects />
 
       {/* Services Section */}
       <section className="section-padding bg-gray-50" id="services">
